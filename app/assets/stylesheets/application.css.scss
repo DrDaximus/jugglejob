@@ -1,0 +1,170 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require font-awesome
+ *= require_tree .
+ *= require_self
+ */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
+
+/**
+* reset browser defaults
+----------------------------------*/
+body,div,dl,dt,dd,ul,ol,
+li,h1,h2,h3,h4,h5,h6,
+pre,form,fieldset,p,
+blockquote,th,td          {margin:0;padding:0;}
+body                      {line-height:1;color:#121212;background:#fff;}
+h1,h2,h3,h4,h5,h6,p       {font-size:100%;font-weight:400;}
+ol,ul                     {list-style:none;}
+caption,cite,code,th      {font-style:normal;font-weight:400;}
+fieldset,img              {border:0;}
+caption,th                {text-align:left;}
+:focus                    {outline:1px dotted #eee;}
+table                     {border-collapse:collapse;border-spacing:0;}
+hr                        {border:0;border-top:1px solid #555;margin:0;height:1px;}
+
+/* start of my css */
+
+$white_opaque: rgba(250, 250, 250, .8);
+$form_input_bg: rgba(80, 10, 10, .1) ;
+$red: #DB6161;
+$blue: #4A90E2;	
+$active: #50E3C2;
+$lightgrey: #D8D8D8;
+$darkgrey: #8A8A8A;
+$white: #FFFFFF;
+
+@mixin box-shadow {
+	-webkit-box-shadow: rgba(0, 0, 0, 0.09) 0 2px 0;
+	-moz-box-shadow: rgba(0, 0, 0, 0.09) 0 2px 0;
+	box-shadow: rgba(0, 0, 0, 0.09) 0 2px 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+ 
+ 	background: rgb(255, 255, 255);
+ 	/*
+  background: -webkit-linear-gradient(-40deg, $sky 20%, #FFFFFF 90%);
+  background:    -moz-linear-gradient(-40deg, $sky 20%, #FFFFFF 90%);
+  background:     -ms-linear-gradient(-40deg, $sky 20%, #FFFFFF 90%);
+  background:      -o-linear-gradient(-40deg, $sky 20%, #FFFFFF 90%);
+  background:         linear-gradient(-40deg, $sky 20%, #FFFFFF 90%);*/
+  font-family: 'Candara', sans-serif;
+  margin:0;
+
+}
+
+#jugglejob_bg {
+		margin-top:0px;
+		background-image: image-url("intro_bg.jpg");
+		height: 100vh;
+		width:100vw;
+		background-size: cover;
+		background-position: center;
+}
+
+#nav_bar {
+	
+	font-family: Bauhaus, "Bauhaus 93";
+	margin-bottom: 0px;
+	width:100vw;
+	position: absolute;
+	z-index:1030;
+	@include box-shadow;
+	border: none;
+	background: white;
+
+
+		header {
+
+			width: 80%;
+			padding: 1rem 0;
+			margin: 0 auto;
+			
+
+			#logo {
+				
+				
+				float: left;
+				font-weight: 400;
+				color: $red;
+				text-decoration: none;
+				font-size: 3rem;
+			}
+
+			nav {
+			
+				font-size: 1.5rem;
+				float: right;
+				margin-top: 1rem;
+				ul {
+					list-style: none;
+					li {
+						display: inline;
+						margin-left: 2rem;
+						a {
+							 color: $red;
+							 text-decoration: none;
+							 transition: all .4s ease-in-out;
+								&:hover {
+									color: $red;
+									opacity: 0.5;
+								}
+						}	
+					}
+				}
+			}
+		}
+}
+
+.page_full {
+	
+	width: 100vw;
+	height: 100vh;
+	text-align: center;
+	padding-top: 8rem;
+	padding-left: 5vw;
+	padding-right: 5vw;
+	background: rgba(255,255,255,0.8);
+	
+	.search-nav {
+		float: center;
+		a {
+			color: $darkgrey;
+			font-weight: 700;
+			margin: 0 0.5em;
+			text-decoration: none;
+			&:hover {
+					color: $lightgrey;
+			}
+		}
+		.current {
+			color: $red;
+			font-weight: 700;
+			text-decoration: none;
+			&:hover {
+				color: $red;
+			}
+		}
+	}
+}
+
+
