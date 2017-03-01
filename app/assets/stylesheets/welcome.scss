@@ -2,71 +2,107 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-$white_opaque: rgba(250, 250, 250, .8);
-$dark: rgba(31, 121, 114,1);
-$grey: #8A8A8A;
-$rusty: rgba(80, 10, 10, .5);
-$sky: #e6f2ff;
-$form_input_bg: rgba(80, 10, 10, .1) ;
-$red: #DB6161;
-$darkgrey: #8A8A8A;
+$mainbg: #F3F4EF;
+$secondary: #696868;
+$main: #E94D4D;
 
-
-.welcome_skinny { 
-	margin:0;
-	width: 70%;
+.center {
 	text-align: center;
-	padding-top: 12rem;
-	margin-left: 15%;
-	h1 {
-		font-family: HouseScript, "SignPainter"; 
-		font-size: 8rem;
-		color: $red;
-		text-decoration: none;
-	}
-	p {
-		
-		font-size: 2rem;
-		color: #4F4F4F;
-		text-decoration: none;
-		font-family: Eurostile, "Eurostile";
-		margin: 3rem 0 5rem 0;
-	}
 }
 
-.button {
-	text-decoration: none;
-	font-size: 2rem;
-	padding: 1rem 2rem;
-	border-radius: 2rem;
-	outline: none;
-	border:none;
-	display: inline-block;
-	min-width:20rem;
-	color:white;
-	margin: 0 1rem;
+#landing-wrapper {
+	height: 100%;
+	width: 100%;
+	background: $mainbg;
+	font-family: din-condensed, sans-serif;
 }
 
-.button_highlight{
-	background: $red;
-	border: 2px solid $red;
-	transition: all .4s ease-in-out;
-	&:hover {
-			color:white;
-			background: darken($red, 7.5%);
-			border: 2px solid darken($red, 7.5%);
-			text-decoration: none;
-		}
+#main-logo {
+	color: $secondary;
+	font-size: 3.5em;
+	font-family: HouseScript, "SignPainter"; 
+	padding: 50px;
 }
 
-.button_white {
+#welcome-heading {
+	
+	font-weight: 600;
+	color: $main;
+	font-size: 2.8em;
+}
+
+.sub-heading {
+	padding: 10px;
+	font-weight: 600;
+	color: $secondary;
+	font-size: 1.3em;
+}
+#lower-sub-heading {
+	color: $main;
+	padding: 40px;
+}
+#white-banner {
 	background: white;
-	border: 2px solid $red;
-	transition: all .4s ease-in-out;
-	color: $red;
-	&:hover {
-			background: $darkgrey;
-			color: white;
-			text-decoration: none;
-		}
+	height: 160px;
+	margin-top: 100px;
+	box-shadow: inset 0 0 5px 0 rgba(0,0,0,0.50);
 }
+#builder-image-row {
+	width: 100%;
+}
+#builder-image {
+	text-align: center;
+	margin-top: -35px;
+}
+
+#circle-stats {
+	max-width: 900px;
+	margin: 0 auto;
+	font-weight: bold;
+	font-size: 0.8em;
+	margin-bottom: 20px;
+	.landing-circle-header {
+		color: $secondary;
+		padding: 10px 0;
+		font-size: 1.5em;
+	}
+	.landing-circle-text {
+		color: $secondary;
+		padding: 10px 0;
+	}
+	.reduced-padding{
+		padding: 2px;
+	}
+	.landing-stat-circle {
+		margin: 0 auto;
+		height: 100px;
+		width: 100px;
+		background: #D8D8D8;
+		border-radius: 50%;
+		padding-top: 32px;
+		.icon {
+			color: white;
+			font-size: 3em
+		}
+	}
+}
+
+#large-white-banner {
+	background: white;
+	padding: 40px 10%;
+}
+#features-sub-heading {
+	margin-top: 10px;
+}
+#features-list {
+	text-align: center;
+}
+#coming-soon-sub-heading {
+	padding: 20px;
+	color: $main;
+}
+#copyright {
+	color: $secondary;
+	padding-bottom: 10px;
+}
+

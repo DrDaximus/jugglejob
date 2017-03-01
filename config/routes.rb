@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
   resources :users
+  resources :blue
+  get 'level_one' => "blue#level_one"
+  get 'level_two' => "blue#level_two"
+  get 'level_three' => "blue#level_three"
+  get 'level_four' => "blue#level_four"
+  get 'level_five' => "blue#level_five"
+  get 'level_six' => "blue#level_six"
+  get 'level_seven' => "blue#level_seven"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -1,0 +1,190 @@
+// Place all the styles related to the blue controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#blue-wrapper {
+	margin: 0 auto;
+	width: 1024px;
+	height: 1508px;
+}
+#final-wrapper {
+	.red {
+		padding-top: 80px;
+		color: #FF7878;
+	}
+	font-family: Brush Script MT;
+	margin: 0 auto;
+	width: 1024px;
+	height: 766px;
+	#finish-img {
+		margin-left: 300px;
+		padding: 40px 0;
+	}
+}
+
+.center {
+	text-align: center;
+}
+
+.lg-grey {
+	font-weight: bold;
+	font-size: 1.7em;
+	color: #9D9D9D;
+	font-size: 1.7em;
+	color: #9D9D9D;
+}
+
+#arms-mosnty-img {
+	position: absolute;
+	z-index: -2000;
+	margin-left: 400px;
+	margin-top: 80px;
+}
+
+#heart-img {
+	position: absolute;
+	z-index: -1000;
+	margin-left: 285px;
+	top: 165px;
+}
+
+#main-title {
+	color: #9D9D9D;
+	text-align: center;
+	font-size: 4em;
+	padding: 50px;
+}
+
+#heart-text {
+	margin: 0 auto;
+	width: 360px;
+	margin-top: 90px;
+	color: white;
+}
+
+.nuts-img {
+	margin-top: -225px;
+}
+#platto {
+	position: absolute;
+	margin-left: 460px;
+	top: 670px;
+	#platto-img {
+		display: inline-block;
+		#squirrel {
+			margin-top: 80px;
+		}
+		#clock {
+			padding-left: 10px;
+		}
+		#pan {
+			padding-top: 40px;
+			padding-left: 20px;
+		}
+		#door {
+			padding-top: 60px;
+			padding-left: 20px;
+		}
+		#aa {
+			padding-top: 60px;
+			padding-left: 20px;
+		}
+		#group {
+			margin-left: -250px;
+    	margin-top: 80px;
+		}
+	}
+	#platto-text {
+		padding: 0 0 0 20px;
+		display: inline-block;
+	}
+}
+
+#tell-me {
+	position: absolute;
+	margin-left: 450px;
+	top: 980px;
+}
+
+#end-text {
+	width: 450px;
+	text-align: right;
+	position: absolute;
+	top: 1220px;
+}
+
+#menu	{
+	width: 504px;
+	margin: 0 auto;
+	margin-top: 1000px;
+	.face-btn{
+		width:250px;
+		display: inline-block;
+		text-align: center;
+		padding-top: 20px;
+		font-size: 1.7em;
+		font-weight: bold;
+	}
+
+	#large-btn {
+		cursor: pointer;
+		font-weight: bold;
+		font-size: 2em;
+		padding-top: 30px;
+		width: 100%;
+		height: 90px;
+		background: rgba(221,221,221,0.8);
+		border-radius: 50px;
+		color: #4BC165;
+		a {color: #4BC165;}
+	}
+	#smile {
+		a {color: #4BC165;}
+	}
+	#sad {
+		color: #FF7878;
+	}
+}
+
+#form-wrapper {
+	width: 550px;
+	position: absolute;
+	margin-left: 50px;
+	margin-top: 700px;
+	#answer {
+		width: 550px;
+		height: 70px;
+		border-radius: 35px;
+		border: solid 2px grey;
+		padding-left: 30px;
+		font-size: 1.6em;
+	}
+	#submit-ans {
+		cursor: pointer;
+		float: right;
+		background: #4BC165;
+		width: 200px;
+		height: 60px;
+		border-radius: 30px;
+		margin-top: 10px;
+		text-align: center;
+		padding-top: 18px;
+		color: white;
+		font-size: 1.5em;
+	}
+	#hint {
+		cursor: pointer;
+		margin: 27px 20px;
+		float: right;
+	}
+}
+
+#correct-monsty {
+	position: absolute;
+	top: 980px;
+	right: 0;
+	z-index: -1000;
+}
+.cake {
+	right: 50px !important;
+}

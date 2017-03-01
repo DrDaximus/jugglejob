@@ -1,0 +1,56 @@
+<div id="blue-wrapper">
+
+	<div id="arms-mosnty-img">
+		<%= image_tag("arms-monsty.png", :alt => "arms-monsty") %>
+	</div> 
+	<div id="heart-img">
+		<%= image_tag("blue-heart.png", :alt => "Heart & Dots") %>
+	</div> 
+
+	<div id="main-title">
+		YIPPIE!
+	</div>
+
+	<div class="center lg-grey" id="heart-text">
+		You've made Monsty very happy!<br><br>
+		On with the game
+	</div>
+	
+	<div id="platto">
+		<div id="platto-img">
+			<div id="squirrel">
+				<%= image_tag("squirrel.png", :alt => "Squirrel") %>
+			</div> 
+		</div> 
+		<div class="lg-grey" id="platto-text">
+			...What did the boy squirrel <br>say to the girl squirrel?
+		</div>
+	</div>
+
+	<div id="tell-me">
+		<%= image_tag("tell-me.png", :alt => "Nuts") %>
+	</div>
+
+	<div class="hide nuts-img" id="end-text">
+		<%= image_tag("nuts.png", :alt => "Nuts") %>
+	</div>
+
+	<div id="menu">
+		<%= link_to level_two_path do %>
+			<div class="hide center" id="large-btn">
+				LET'S CONTINUE...
+			</div>
+		<% end %>
+	</div>
+
+</div>
+
+<script>
+
+	document.getElementById("tell-me").addEventListener("click", function(){
+		document.getElementById("end-text").className = "nuts-img";
+	  document.getElementById("large-btn").className = "center";
+	  this.className = "hide"
+	});
+	
+</script>

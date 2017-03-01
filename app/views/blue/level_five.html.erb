@@ -1,0 +1,95 @@
+<div id="blue-wrapper">
+
+	<div id="heart-img">
+		<%= image_tag("blue-heart.png", :alt => "Heart & Dots") %>
+	</div> 
+
+	<div id="main-title">
+		Question 3
+	</div>
+
+	<div class="center lg-grey" id="heart-text">
+		3. I have only one neighbour, we all 
+		call her B, I will often start words but rarely finish them you see.
+	</div>
+	
+	<div id="platto">
+		<div class="hide" id="platto-img">
+			<div id="aa">
+				<%= image_tag("Aa.png", :alt => "Aa") %>
+			</div> 
+		</div> 
+		<div class="lg-grey" id="platto-text">
+
+		</div>
+	</div>
+
+	<div id="form-wrapper">
+		<%= form_tag do %>
+
+	    <%= text_field_tag :answer, "", placeholder: "Enter your answer here!" %>
+			<div id="submit-ans">
+				Submit Answer
+			</div>
+			<div class="lg-grey" id="hint">
+				HINT
+			</div>
+		<% end %>
+	</div>
+
+	<div class="hide" id="end-text">
+		
+	</div>
+
+	<div id="menu">
+		<%= link_to level_six_path do %>
+			<div class="hide center" id="large-btn">
+				To the PRIZE :)
+			</div>
+		<% end %>
+	</div>
+
+	<div class="hide" id="correct-monsty">
+		<%= image_tag("monsty3.png", :alt => "Correct") %>
+	</div>
+
+</div>
+
+<script>
+
+	var mySubmit = document.getElementById("submit-ans");
+	var userAnswer = document.getElementById("answer");
+	var endText = document.getElementById("end-text");
+	var hint = document.getElementById("hint");
+	var monsty = document.getElementById("correct-monsty");
+	var cont = document.getElementById("large-btn");
+	var platto = document.getElementById("platto-img");
+
+	$(document).ready(function() {
+		userAnswer.value = "";
+	});
+
+	hint.addEventListener("click", function(){
+		endText.className = "lg-grey";
+		endText.innerHTML = "CHEAT!!! CHEAT!!! The Alphabet!!!"
+	});
+
+	mySubmit.addEventListener("click", function(){
+		var downAns = userAnswer.value.toLowerCase();
+		var correctAns = "a";
+
+		if (downAns.includes(correctAns)) {
+			monsty.className = "";	
+			cont.className = "center";
+			platto.className = ""
+			endText.innerHTML = "Scones for Monsty???";
+			endText.className = "lg-grey";
+		}	
+		else {
+			userAnswer.value = "";
+			endText.innerHTML = "NOB NOB!!! Try Again."
+			endText.className = "lg-grey";
+		}
+	});
+	
+</script>

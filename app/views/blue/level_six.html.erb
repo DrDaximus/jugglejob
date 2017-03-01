@@ -1,0 +1,96 @@
+<div id="blue-wrapper">
+
+	<div id="heart-img">
+		<%= image_tag("blue-heart.png", :alt => "Heart & Dots") %>
+	</div> 
+
+	<div id="main-title">
+		What could it be???
+	</div>
+
+	<div class="center lg-grey" id="heart-text">
+		So you found the Pan, you got the Door and you revealed the A…<br>
+		What could this mean?
+	</div>
+	
+	<div id="platto">
+		<div id="platto-img">
+			<div id="group">
+				<%= image_tag("group.png", :alt => "Aa") %>
+			</div> 
+		</div> 
+		<div class="lg-grey" id="platto-text">
+
+		</div>
+	</div>
+
+	<div id="form-wrapper">
+		<%= form_tag do %>
+
+	    <%= text_field_tag :answer, "", placeholder: "Enter your answer here!" %>
+			<div id="submit-ans">
+				Submit Answer
+			</div>
+			<div class="lg-grey" id="hint">
+				HINT
+			</div>
+		<% end %>
+	</div>
+
+	<div class="hide" id="end-text">
+	</div>
+
+	<div id="menu">
+		<%= link_to level_seven_path do %>
+			<div class="hide center" id="large-btn">
+				FIND ME!
+			</div>
+		<% end %>
+	</div>
+
+	<div class="hide cake" id="correct-monsty">
+		<%= image_tag("celebrate.png", :alt => "Correct") %>
+	</div>
+
+</div>
+
+<script>
+
+	var mySubmit = document.getElementById("submit-ans");
+	var userAnswer = document.getElementById("answer");
+	var endText = document.getElementById("end-text");
+	var hint = document.getElementById("hint");
+	var monsty = document.getElementById("correct-monsty");
+	var cont = document.getElementById("large-btn");
+	var platto = document.getElementById("platto-img");
+
+	$(document).ready(function() {
+		userAnswer.value = "";
+	});
+
+	hint.addEventListener("click", function(){
+		endText.className = "lg-grey";
+		endText.innerHTML = "Pan --- Door --- A (Say them quickly!)"
+	});
+
+	mySubmit.addEventListener("click", function(){
+		var downAns = userAnswer.value.toLowerCase();
+		var correctAns = "pandora";
+
+		if (downAns.includes(correctAns)) {
+			console.log("YEP")
+			cont.className = "center";
+			endText.innerHTML = ":) YIP YIP YIP YIP YIP YIP YIP!!!";
+			endText.className = "lg-grey";
+			monsty.className = "cake";
+			platto.className = "hide";
+		}	
+		else {
+			console.log("NOPE")
+			userAnswer.value = "";
+			endText.innerHTML = "NOB NOB!!! Try Again."
+			endText.className = "lg-grey";
+		}
+	});
+	
+</script>
